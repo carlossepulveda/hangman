@@ -104,7 +104,6 @@ public class Games {
         }
 
         GuessCharForm form = request.parseBody(GuessCharForm.class);
-        System.out.println(form);
         if (form == null) {
             return new Response().withStatus(400).withBody("Invalid data");
         }
