@@ -1,0 +1,36 @@
+  <div class="container">
+      <div class="header clearfix">
+
+      </div>
+
+      <div class="jumbotron">
+        <h1>{{ game.word }}</h1>
+        <p class="lead"> Tries left : {{ game.tries }}</p>
+        <form class="navbar-form navbar-left" role="search" ng-show="game.status == 'BUSY'">
+    		  <div class="form-group">
+    		    <input type="text" class="form-control" placeholder="Search" ng-model="char">
+    		  </div>
+    		</form>
+        <p ng-show="game.status == 'BUSY'"><a class="btn btn-lg btn-success" role="button" ng-click="guess(char)">Guess</a></p>
+      </div>
+      <div class="jumbotron">
+        <div ng-show="game.status == 'BUSY'">
+          <h1 style="display:inline-block" ng-show="game.tries < 11">!</h1>
+          <h1 style="display:inline-block" ng-show="game.tries < 10">G</h1>
+          <h1 style="display:inline-block" ng-show="game.tries < 9">A</h1>
+          <h1 style="display:inline-block" ng-show="game.tries < 8">M</h1>
+          <h1 style="display:inline-block" ng-show="game.tries < 7">E</h1>
+          <h1 style="display:inline-block" ng-show="game.tries < 6">-</h1>
+          <h1 style="display:inline-block" ng-show="game.tries < 5">O</h1>
+          <h1 style="display:inline-block" ng-show="game.tries < 4">V</h1>
+          <h1 style="display:inline-block" ng-show="game.tries < 3">E</h1>
+          <h1 style="display:inline-block" ng-show="game.tries < 2">R</h1>
+          <h1 style="display:inline-block" ng-show="game.tries < 1">!</h1>
+        </div>
+        <div ng-show="game.status != 'BUSY'">
+          <h1>{{ game.status }}</h1>
+        </div>
+      </div>
+
+    </div> <!-- /container -->
+

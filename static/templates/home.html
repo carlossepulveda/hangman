@@ -1,0 +1,28 @@
+
+	<div style="height:50px;width:100%;background-color:black"></div>
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <img style="display:inline-block;float:right;width:20%;height:20%" src="/static/images/hangman.png"/>
+        <h1 style="display:inline-block">Hangman</h1>
+        <p>The Miwi test</p>
+        <p><a class="btn btn-primary btn-lg" ng-click="createGame()" role="button">New game</a></p>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div ng-repeat="game in games" class="col-md-4" style="border-style:solid;border-width:1px;border-color:rgba(210,210,210,0.7);border-radius:10px">
+          <h2>ID : {{ game.id }}</h2>
+          <h4>WORD : {{ game.word }}</h4>
+          <h4>TRIES : {{ game.tries }}</h4>
+          <h4>STATUS : {{ game.status }}</h4>
+          <p><a class="btn btn-default" ng-click="viewGame(game.id)">View details »</a></p>
+        </div>
+      </div>
+
+      <hr>
+
+      
+    </div>
