@@ -27,7 +27,7 @@ hangmanWebApp.service("GameService", function ($http, $q) {
     function createGame(handleSuccess, handleError) {
         var request = $http({
             method: "POST",
-            url: "games"
+            url: "/games"
         });
 
         return(request.then(handleSuccess, handleError));

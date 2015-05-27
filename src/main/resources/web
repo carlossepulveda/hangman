@@ -57,9 +57,6 @@ getpid() {
     fi
 }
 
-mkdir sounds
-mkdir files
-
 if [ "$1" = "start" ] ; then
         echo "Running $APP_LONG_NAME ..."
         shift
